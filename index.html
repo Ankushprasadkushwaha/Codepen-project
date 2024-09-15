@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodePen Project</title>
-
-  <!-- Add Roboto Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Include GSAP (if animations are needed) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-
-  <style>
-    /* Add your CSS styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* Example of CSS */
-    .container {
-      /* Your container styles */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Animation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Your HTML content -->
-  <div class="container">
-    <h1>Hello, World!</h1>
-    <img src="your-image-url.jpg" alt="Your Image">
-  </div>
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">Paris</div>
+                <div class="num">01</div>
+                <img src="https://media.istockphoto.com/id/949299844/it/foto/vista-prospettica-dellesterno-delledificio-contemporaneo.jpg?s=612x612&w=0&k=20&c=_DR1aRHuTEV3EYBJo1ZXq1pF4SgwB9EVWQLaBj4sC5g=" />
+            </div>
+        </div>
+        <!-- Add more carousel items here -->
+    </div>
 
-  <!-- GSAP Animation Script -->
-  <script>
-    // Example: Basic GSAP animation setup
-    gsap.from(".container", {
-      duration: 1.5,
-      y: 100,
-      opacity: 0,
-      ease: "power2.out"
-    });
-  </script>
+    <div class="layout">
+        <div class="box">High-end, full-service<br />visual content creation<br />for lifestyle branding.</div>
+    </div>
+
+    <a href="https://www.supah.it" target="_blank" class="logo">S</a>
+    <div class="social">
+        <a href="https://www.linkedin.com/in/fabio-ottaviani-82b0776/" target="_blank">
+            <svg><use xlink:href="#ico-linkedin"></use></svg>
+        </a>
+        <a href="https://www.instagram.com/supahfunk/" target="_blank">
+            <svg><use xlink:href="#ico-instagram"></use></svg>
+        </a>
+    </div>
+
+    <svg style="display: none">
+        <symbol id="ico-instagram" viewBox="0 0 35 35">
+            <!-- SVG Path for Instagram icon -->
+        </symbol>
+        <symbol id="ico-linkedin" viewBox="0 0 35 35">
+            <!-- SVG Path for LinkedIn icon -->
+        </symbol>
+    </svg>
+
+    <div class="cursor"></div>
+    <div class="cursor cursor2"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
